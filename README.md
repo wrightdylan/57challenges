@@ -1,0 +1,1 @@
+These are my solutions to the exercises from the book "Exercises for Programmers: 57 Challenges to Develop Your Coding Skills" by Brian P. Hogan, published by The Pragmatic Programmers. The exercises are published language agnostic, and I chose to complete them in Rust.
