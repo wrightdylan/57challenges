@@ -1,10 +1,11 @@
 [package]
-name = "ch05"
+name = "ch06"
 version = "0.1.0"
 authors = ["Dylan Wright"]
 edition = "2021"
 
 [dependencies]
+chrono = "0.4.23"
 
 [profile.dev]
 opt-level = 1

@@ -12,3 +12,4 @@ All solutions linked below:
 | [03](./ch03/src/main.rs) | Printing Quotes                   |
 | [04](./ch04/src/main.rs) | Mad Lib                           |
 | [05](./ch05/src/main.rs) | Simple Math                       |
+| [06](./ch06/src/main.rs) | Retirement Calculator             |
