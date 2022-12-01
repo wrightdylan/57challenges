@@ -1,0 +1,20 @@
+[package]
+name = "ch05"
+version = "0.1.0"
+authors = ["Dylan Wright"]
+edition = "2021"
+
+[lib]
+path = "src/main.rs"
+
+[dependencies]
+
+[profile.dev]
+opt-level = 1
+
+[profile.release]
+strip = true      # Automagically strip symbols from the library
+opt-level = "z"   # Highest optimisation
+lto = true        # Enable link time optimisation
+codegen-units = 1 # Maximise size reduction optimisation
+#panic = 'abort'   # Aborts on panic
