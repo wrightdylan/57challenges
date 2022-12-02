@@ -13,3 +13,4 @@ All solutions linked below:
 | [04](./ch04/src/main.rs) | Mad Lib                           |
 | [05](./ch05/src/main.rs) | Simple Math                       |
 | [06](./ch06/src/main.rs) | Retirement Calculator             |
+| [07](./ch07/src/main.rs) | Area of a Rectangular Room        |
