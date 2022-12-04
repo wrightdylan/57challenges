@@ -19,3 +19,4 @@ All solutions linked below:
 | [06](./ch06/src/main.rs) | Retirement Calculator             |
 | [07](./ch07/src/main.rs) | Area of a Rectangular Room        |
 | [08](./ch08/src/main.rs) | Pizza Party                       |
+| [09](./ch09/src/main.rs) | Paint Calculator                  |
