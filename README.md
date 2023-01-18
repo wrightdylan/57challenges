@@ -21,3 +21,4 @@ All solutions linked below:
 | [08](./ch08/src/main.rs) | Pizza Party                       |
 | [09](./ch09/src/main.rs) | Paint Calculator                  |
 | [10](./ch10/src/main.rs) | Self-Checkout                     |
+| [11](./ch11/src/main.rs) | Currency Conversion               |

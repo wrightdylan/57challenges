@@ -1,0 +1,20 @@
+[package]
+name = "ch11"
+version = "0.1.0"
+authors = ["Dylan Wright"]
+edition = "2021"
+
+[dependencies]
+reqwest = { version = "0.11.13", features = ["blocking", "json"] }
+serde_json = "1.0.91"
+tokio = { version = "1.24.2", features = ["full"] }
+
+[profile.dev]
+opt-level = 1
+
+[profile.release]
+strip = true      # Automagically strip symbols from the library
+opt-level = "z"   # Highest optimisation
+lto = true        # Enable link time optimisation
+codegen-units = 1 # Maximise size reduction optimisation
+panic = 'abort'   # Aborts on panic
