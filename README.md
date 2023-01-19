@@ -23,3 +23,4 @@ All solutions linked below:
 | [10](./ch10/src/main.rs) | Self-Checkout                     |
 | [11](./ch11/src/main.rs) | Currency Conversion               |
 | [12](./ch12/src/main.rs) | Computing Simple Interest         |
+| [13](./ch13/src/main.rs) | Determining Compound Interest     |
