@@ -1,6 +1,6 @@
 use std::{io, num::{ParseFloatError, ParseIntError}};
 
-fn get_principal() -> f32 {
+fn get_principal() -> f64 {
     loop {
         println!("Enter the principal:");
 
@@ -9,12 +9,12 @@ fn get_principal() -> f32 {
             .read_line(&mut principal)
             .expect("Failed to read line.");
         
-        let principal_trim = principal.trim().parse::<f32>();
+        let principal_trim = principal.trim().parse::<f64>();
         if test_fin_float(&principal_trim) { break principal_trim.unwrap() };
     }
 }
 
-fn get_rate() -> f32 {
+fn get_rate() -> f64 {
     loop {
         println!("Enter interest rate as %:");
 
@@ -23,7 +23,7 @@ fn get_rate() -> f32 {
             .read_line(&mut rate)
             .expect("Failed to read line.");
 
-        let rate_trim = rate.trim().parse::<f32>();
+        let rate_trim = rate.trim().parse::<f64>();
         if test_float(&rate_trim) { break rate_trim.unwrap() };
     }
 }
@@ -43,12 +43,12 @@ fn get_years() -> usize {
 }
 
 // Because this is 'simple interest' it does not take into account compounding like in real life
-fn calculate_simple_interest(principal: f32, rate: f32, years: usize) -> f32 {
-    let interest = principal + (principal * (rate / 100.0) * years as f32);
+fn calculate_simple_interest(principal: f64, rate: f64, years: usize) -> f64 {
+    let interest = principal * (1.0 + ((rate / 100.0) * years as f64));
     interest
 }
 
-fn test_fin_float(input: &Result<f32, ParseFloatError>) -> bool {
+fn test_fin_float(input: &Result<f64, ParseFloatError>) -> bool {
     match input {
         Ok(ok) => if ok > &0.0 {
                 if ok.to_string().contains('.') && ok.to_string().split('.').last().unwrap().len() > 2 {
@@ -68,7 +68,7 @@ fn test_fin_float(input: &Result<f32, ParseFloatError>) -> bool {
     }
 }
 
-fn test_float(input: &Result<f32, ParseFloatError>) -> bool {
+fn test_float(input: &Result<f64, ParseFloatError>) -> bool {
     match input {
         Ok(ok) => if ok > &0.0 {
                 return true;
@@ -103,12 +103,13 @@ fn main() {
     let rate = get_rate();
     let years = get_years();
 
+    // Supposed to round up, but even at 64-bit precision there are very tiny errors which should be 0
     for i in 1..=years {
         let interest = calculate_simple_interest(principal, rate, i);
         if i == 1 {
-            println!("After {} year at {}%, the investment will be worth ${}.", i, rate, interest);
+            println!("After {} year at {}%, the investment will be worth ${:.2}", i, rate, interest);
         } else {
-            println!("After {} years at {}%, the investment will be worth ${}.", i, rate, interest);
+            println!("After {} years at {}%, the investment will be worth ${:.2}", i, rate, interest);
         }
     }
 }

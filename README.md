@@ -9,7 +9,7 @@ These are my solutions to the exercises from the book "Exercises for Programmers
 ## Solutions
 
 All solutions linked below:
-| Index                    | Title                             |
+| Idx                      | Title                             |
 |:-------------------------|:----------------------------------|
 | [01](./ch01/src/main.rs) | Saying Hello                      |
 | [02](./ch02/src/main.rs) | Counting the Number of Characters |
