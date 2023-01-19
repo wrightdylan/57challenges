@@ -4,7 +4,7 @@ These are my solutions to the exercises from the book "Exercises for Programmers
 
 57 is a bit of an arbitrary number. I wonder if this is a reference to Heinz's 57 varieties.
 
-:open_book:Get the book direct from PragProg [here](https://pragprog.com/titles/bhwb/exercises-for-programmers/).
+:open_book: Get the book direct from PragProg [here](https://pragprog.com/titles/bhwb/exercises-for-programmers/).
 
 ## Solutions
 
@@ -22,3 +22,4 @@ All solutions linked below:
 | [09](./ch09/src/main.rs) | Paint Calculator                  |
 | [10](./ch10/src/main.rs) | Self-Checkout                     |
 | [11](./ch11/src/main.rs) | Currency Conversion               |
+| [12](./ch12/src/main.rs) | Computing Simple Interest         |
